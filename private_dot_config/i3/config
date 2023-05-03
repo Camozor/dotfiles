@@ -188,6 +188,8 @@ bindsym $mod+r mode "resize"
 # Custom Camille
 exec_always feh --bg-fill $HOME/perso/wallpapers/coolislands.jpeg
 
+bindsym $mod+Shift+s exec "gnome-control-center" 
+
 # move focused workspace between monitors
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
