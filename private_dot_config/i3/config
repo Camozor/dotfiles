@@ -22,6 +22,7 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -60,6 +61,20 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+# Press $mod+o followed by either f, t, Escape or Return to launch firefox,
+# thunderbird or return to the default mode, respectively.
+
+# Launch mode
+set $mode_launcher Launch: [k]9s [f]irefox 
+bindsym $mod+o mode "$mode_launcher"
+mode "$mode_launcher" {
+
+    bindsym k exec "kitty --hold k9s"
+    bindsym f exec firefox
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
 
 # change focus
 bindsym $mod+j focus down
@@ -182,7 +197,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always feh --bg-fill $HOME/perso/wallpapers/coolislands.jpeg
+exec_always feh --bg-fill $HOME/perso/wallpapers/sunrise-phu-quoc-island-ocean.webp
 
 bindsym $mod+Shift+s exec "gnome-control-center" 
 
@@ -194,11 +209,11 @@ bar {
 	font pango:Inconsolata 10
 	position top
 	tray_output none
-	status_command $HOME/.local/bin/bumblebee-status \
-    -m cpu memory battery time \
-    pasink pasource \
-    -p time.format="%H:%M" \
-		-t solarized-powerline
+	# status_command $HOME/.local/bin/bumblebee-status \
+ #    -m cpu memory battery time \
+ #    pasink pasource \
+ #    -p time.format="%H:%M" \
+	# 	-t iceberg-rainbow
 
    colors {
         background #000000
@@ -225,3 +240,19 @@ client.background       #ffffff
 gaps inner 10
 
 default_border pixel
+
+# default program workspaces
+exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/brave-browser'
+assign [class="Brave-browser"] $ws2 
+
+exec --no-startup-id i3-msg 'workspace $ws8; exec /snap/bin/discord'
+assign [class="discord"] $ws8 
+
+exec --no-startup-id i3-msg 'workspace $ws9; exec /snap/bin/slack'
+assign [class="Slack"] $ws9 
+
+exec --no-startup-id i3-msg 'workspace $ws7; exec /snap/bin/spotify'
+assign [class="Spotify"] $ws7 
+
+assign [class="Microsoft Teams - Preview"] $ws10
+
