@@ -14,9 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "numToStr/Comment.nvim", opts = {} },
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "catppuccin/nvim",               name = "catppuccin", priority = 1000 },
+	{ "numToStr/Comment.nvim",         opts = {} },
+	{ "nvim-telescope/telescope.nvim", branch = "0.1.x",    dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -27,20 +27,22 @@ require("lazy").setup({
 
 	-- LSP
 	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
 		dependencies = {
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{'williamboman/mason.nvim'},           -- Optional
-			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ "williamboman/mason.nvim" }, -- Optional
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+			{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},     -- Required
-			{'hrsh7th/cmp-nvim-lsp'}, -- Required
-			{'L3MON4D3/LuaSnip'},     -- Required
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
 		}
 	},
+	{ "nvimdev/guard.nvim" },
 	{
 		-- Autocompletion
 		"hrsh7th/nvim-cmp",
@@ -56,6 +58,13 @@ require("lazy").setup({
 			"rafamadriz/friendly-snippets",
 		},
 	},
-	{ "ThePrimeagen/harpoon" }
+	{ "ThePrimeagen/harpoon" },
+	{ "lewis6991/gitsigns.nvim" }
+})
+
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		"prettierd"
+	}
 })
 
