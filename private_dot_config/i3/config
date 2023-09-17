@@ -172,7 +172,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+		# These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
@@ -206,28 +206,23 @@ bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 
 bar {
-	font pango:Inconsolata 10
-	position top
-	tray_output none
-	# status_command $HOME/.local/bin/bumblebee-status \
- #    -m cpu memory battery time \
- #    pasink pasource \
- #    -p time.format="%H:%M" \
-	# 	-t iceberg-rainbow
+		font pango:Inconsolata 10
+		position top
+		tray_output none
 
-  status_command i3blocks
+		status_command i3blocks
 
-   colors {
-        background #000000
-        statusline #ffffff
-        separator #666666
+		colors {
+				background #000000
+				statusline #ffffff
+				separator #666666
 
-        focused_workspace  #c678dd #c678dd #ffffff
-        active_workspace   #abb2bf #abb2bf #282c34
-        inactive_workspace #abb2bf #abb2bf #282c34
-        urgent_workspace   #2f343a #900000 #ffffff
-        binding_mode       #2f343a #900000 #ffffff
-    }
+				focused_workspace  #c678dd #c678dd #ffffff
+				active_workspace   #abb2bf #abb2bf #282c34
+				inactive_workspace #abb2bf #abb2bf #282c34
+				urgent_workspace   #2f343a #900000 #ffffff
+				binding_mode       #2f343a #900000 #ffffff
+		}
 }
 
 
