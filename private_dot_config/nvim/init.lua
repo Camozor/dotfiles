@@ -69,6 +69,7 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
+{ "folke/neodev.nvim", opts = {} }
 })
 
 require("mason-tool-installer").setup({
