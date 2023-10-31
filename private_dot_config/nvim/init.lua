@@ -69,7 +69,11 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
-{ "folke/neodev.nvim", opts = {} }
+	{ "folke/neodev.nvim", opts = {} },
+	{ "tpope/vim-fugitive" },
+
+	{ "mfussenegger/nvim-dap" },
+	{ "rcarriga/nvim-dap-ui" },
 })
 
 require("mason-tool-installer").setup({
