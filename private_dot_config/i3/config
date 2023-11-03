@@ -256,3 +256,6 @@ assign [class="Slack"] $ws9
 
 assign [class="Microsoft Teams - Preview"] $ws10
 
+# custom shortcuts
+bindsym Control+$mod+m exec amixer set Capture toggle 
+
