@@ -258,4 +258,5 @@ assign [class="Microsoft Teams - Preview"] $ws10
 
 # custom shortcuts
 bindsym Control+$mod+m exec amixer set Capture toggle 
+bindsym Control+$mod+s exec pactl set-default-sink $(pactl list short sinks | grep -E "SUSPENDED|IDLE" | awk '{print $1}')
 
