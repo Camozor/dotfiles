@@ -14,9 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "numToStr/Comment.nvim", opts = {} },
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "catppuccin/nvim",               name = "catppuccin", priority = 1000 },
+	{ "numToStr/Comment.nvim",         opts = {} },
+	{ "nvim-telescope/telescope.nvim", branch = "0.1.x",    dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -42,7 +42,12 @@ require("lazy").setup({
 			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
 	},
-	{ "nvimdev/guard.nvim" },
+	{
+		"nvimdev/guard.nvim",
+		dependencies = {
+			"nvimdev/guard-collection",
+		},
+	},
 	{
 		-- Autocompletion
 		"hrsh7th/nvim-cmp",
@@ -69,15 +74,10 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
-	{ "folke/neodev.nvim", opts = {} },
+	{ "folke/neodev.nvim",    opts = {} },
 	{ "tpope/vim-fugitive" },
 
 	{ "mfussenegger/nvim-dap" },
 	{ "rcarriga/nvim-dap-ui" },
 })
 
-require("mason-tool-installer").setup({
-	ensure_installed = {
-		"prettierd",
-	},
-})
