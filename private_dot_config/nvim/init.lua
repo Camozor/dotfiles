@@ -73,6 +73,16 @@ require("lazy").setup({
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 			"MunifTanjim/nui.nvim",
 		},
+		config = function()
+			require("neo-tree").setup({
+				filesystem = {
+					filtered_items = {
+						hide_dotfiles = false,
+						hide_gitignored = false,
+					},
+				}
+			})
+		end
 	},
 	{ "folke/neodev.nvim",    opts = {} },
 	{ "tpope/vim-fugitive" },
@@ -80,4 +90,3 @@ require("lazy").setup({
 	{ "mfussenegger/nvim-dap" },
 	{ "rcarriga/nvim-dap-ui" },
 })
-
