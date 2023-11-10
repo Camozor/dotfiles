@@ -23,3 +23,4 @@ end)
 vim.keymap.set("n", "<C-p>", "<cmd>cnext<CR>zz")
 
 vim.keymap.set("n", "<C-c>", "<cmd>only<CR>")
+
