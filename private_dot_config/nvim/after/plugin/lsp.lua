@@ -64,14 +64,12 @@ local function rename_file()
 	source_file = vim.api.nvim_buf_get_name(0)
 
 	vim.ui.input({
-			prompt = "Target : ",
-			completion = "file",
-			default = source_file
-		},
-		function(input)
-			target_file = input
-		end
-	)
+		prompt = "Target : ",
+		completion = "file",
+		default = source_file,
+	}, function(input)
+		target_file = input
+	end)
 
 	local params = {
 		command = "_typescript.applyRenameFile",
@@ -81,7 +79,7 @@ local function rename_file()
 				targetUri = target_file,
 			},
 		},
-		title = ""
+		title = "",
 	}
 
 	vim.lsp.util.rename(source_file, target_file, {})

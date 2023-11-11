@@ -14,9 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "catppuccin/nvim",               name = "catppuccin", priority = 1000 },
-	{ "numToStr/Comment.nvim",         opts = {} },
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x",    dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "numToStr/Comment.nvim", opts = {} },
+	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -80,11 +80,11 @@ require("lazy").setup({
 						hide_dotfiles = false,
 						hide_gitignored = false,
 					},
-				}
+				},
 			})
-		end
+		end,
 	},
-	{ "folke/neodev.nvim",    opts = {} },
+	{ "folke/neodev.nvim", opts = {} },
 	{ "tpope/vim-fugitive" },
 
 	{ "mfussenegger/nvim-dap" },
