@@ -89,4 +89,5 @@ require("lazy").setup({
 
 	{ "mfussenegger/nvim-dap" },
 	{ "rcarriga/nvim-dap-ui" },
+	{ "mhinz/vim-startify" },
 })
