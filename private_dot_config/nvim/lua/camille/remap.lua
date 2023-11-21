@@ -24,9 +24,7 @@ vim.keymap.set("n", "<C-p>", "<cmd>cnext<CR>zz")
 
 vim.keymap.set("n", "<C-c>", "<cmd>only<CR>")
 
-
 vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
 vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
 vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
-
