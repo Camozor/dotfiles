@@ -48,6 +48,7 @@ local servers = {
 			telemetry = { enable = false },
 		},
 	},
+	nil_ls = {},
 }
 
 local function organize_imports()
