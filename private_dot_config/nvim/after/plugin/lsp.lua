@@ -105,6 +105,7 @@ mason_lspconfig.setup({
 	ensure_installed = vim.tbl_keys(servers),
 })
 
+local navbuddy = require("nvim-navbuddy")
 local lspconfig = require("lspconfig")
 
 mason_lspconfig.setup_handlers({
@@ -113,6 +114,9 @@ mason_lspconfig.setup_handlers({
 			settings = servers[server_name],
 			filetypes = (servers[server_name] or {}).filetypes,
 			commands = (commands[server_name] or {}),
+			on_attach = function(client, bufnr)
+				navbuddy.attach(client, bufnr)
+			end,
 		})
 	end,
 })
