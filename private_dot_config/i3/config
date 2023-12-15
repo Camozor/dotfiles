@@ -237,8 +237,6 @@ client.background       #ffffff
 
 default_border pixel
 
-for_window [class=".*"] fullscreen enable
-
 # default program workspaces
 exec --no-startup-id i3-msg 'workspace $ws6; exec /home/camille/.config/screen/element.sh'
 assign [class="Brave-browser" instance="crx_ejhkdoiecgkmdpomoahkdihbcldkgjci"] $ws6

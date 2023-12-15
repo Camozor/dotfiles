@@ -49,6 +49,8 @@ local servers = {
 		},
 	},
 	nil_ls = {},
+	clangd = {},
+	elixirls = {},
 }
 
 local function organize_imports()
