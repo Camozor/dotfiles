@@ -42,3 +42,6 @@ vim.opt.tabstop = 4
 
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
+
+vim.opt.foldcolumn = "1"
+
