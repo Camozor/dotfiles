@@ -117,6 +117,23 @@ require("lazy").setup({
 		end
 	},
 	{
+		"nvim-orgmode/orgmode",
+		dependencies = {
+			{ "nvim-treesitter/nvim-treesitter", lazy = true },
+		},
+		event = "VeryLazy",
+		config = function()
+			-- Load treesitter grammar for org
+			require("orgmode").setup_ts_grammar()
+
+			-- Setup orgmode
+			require("orgmode").setup({
+				org_agenda_files = "~/perso/orgmode/agenda/**/*",
+				org_default_notes_file = "~/perso/orgmode/refile.org",
+			})
+		end
+	},
+	{
 		dev = true,
 		lazy = false,
 		dir = "spotify",

@@ -51,6 +51,7 @@ local servers = {
 	nil_ls = {},
 	clangd = {},
 	elixirls = {},
+	rust_analyzer = {},
 }
 
 local function organize_imports()
