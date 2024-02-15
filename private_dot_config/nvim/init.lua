@@ -117,21 +117,26 @@ require("lazy").setup({
 		end
 	},
 	{
-		"nvim-orgmode/orgmode",
-		dependencies = {
-			{ "nvim-treesitter/nvim-treesitter", lazy = true },
-		},
-		event = "VeryLazy",
+		"nvim-neorg/neorg",
+		build = ":Neorg sync-parsers",
+		-- tag = "*",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			-- Load treesitter grammar for org
-			require("orgmode").setup_ts_grammar()
-
-			-- Setup orgmode
-			require("orgmode").setup({
-				org_agenda_files = "~/perso/orgmode/agenda/**/*",
-				org_default_notes_file = "~/perso/orgmode/refile.org",
-			})
-		end
+			require("neorg").setup {
+				load = {
+					["core.defaults"] = {}, -- Loads default behaviour
+					["core.concealer"] = {}, -- Adds pretty icons to your documents
+					["core.dirman"] = { -- Manages Neorg workspaces
+						config = {
+							workspaces = {
+								notes = "~/perso/notes",
+							},
+							default_workspace = "notes"
+						},
+					},
+				},
+			}
+		end,
 	},
 	{
 		dev = true,

@@ -197,7 +197,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always feh --bg-fill $HOME/perso/wallpapers/sunrise-phu-quoc-island-ocean.webp
+exec_always feh --bg-fill $HOME/perso/wallpapers/xp.jpg
 exec_always xset r rate 200 20  
 
 bindsym $mod+Shift+s exec "gnome-control-center" 
