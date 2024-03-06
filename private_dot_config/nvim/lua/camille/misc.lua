@@ -44,4 +44,3 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 
 vim.opt.foldcolumn = "1"
-

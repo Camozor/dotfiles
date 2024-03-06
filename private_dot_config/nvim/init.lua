@@ -14,9 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "catppuccin/nvim",               name = "catppuccin", priority = 1000 },
-	{ "numToStr/Comment.nvim",         opts = {} },
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x",    dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "numToStr/Comment.nvim", opts = {} },
+	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -81,7 +81,7 @@ require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
 		},
-		opts = {}
+		opts = {},
 	},
 	{ "lewis6991/gitsigns.nvim" },
 	{
@@ -103,7 +103,7 @@ require("lazy").setup({
 			})
 		end,
 	},
-	{ "folke/neodev.nvim",     opts = {} },
+	{ "folke/neodev.nvim", opts = {} },
 	{ "tpope/vim-fugitive" },
 	{ "sindrets/diffview.nvim" },
 	{ "mfussenegger/nvim-dap" },
@@ -114,15 +114,16 @@ require("lazy").setup({
 		dependencies = { "tpope/vim-repeat" },
 		config = function()
 			require("leap").create_default_mappings()
-		end
+		end,
 	},
+	{ "nvim-pack/nvim-spectre", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-neorg/neorg",
 		build = ":Neorg sync-parsers",
 		-- tag = "*",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("neorg").setup {
+			require("neorg").setup({
 				load = {
 					["core.defaults"] = {}, -- Loads default behaviour
 					["core.concealer"] = {}, -- Adds pretty icons to your documents
@@ -131,11 +132,11 @@ require("lazy").setup({
 							workspaces = {
 								notes = "~/perso/notes",
 							},
-							default_workspace = "notes"
+							default_workspace = "notes",
 						},
 					},
 				},
-			}
+			})
 		end,
 	},
 	{
