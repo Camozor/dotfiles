@@ -69,7 +69,7 @@ set $mode_launcher Launch: [k]9s [f]irefox
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
 
-    bindsym k exec "kitty --hold k9s"
+    bindsym k exec "KUBE_EDITOR=nvim kitty --hold k9s"
     bindsym f exec firefox
 
     bindsym Escape mode "default"
@@ -197,7 +197,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always feh $HOME/perso/wallpapers/xp.jpg
 exec_always xset r rate 200 20  
 
 bindsym $mod+Shift+s exec "gnome-control-center" 
