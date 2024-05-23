@@ -52,6 +52,7 @@ local servers = {
 	clangd = {},
 	elixirls = {},
 	rust_analyzer = {},
+	ocamllsp = {},
 }
 
 local function organize_imports()
