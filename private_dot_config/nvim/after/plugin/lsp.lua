@@ -53,6 +53,7 @@ local servers = {
 	elixirls = {},
 	rust_analyzer = {},
 	ocamllsp = {},
+	pyright = {},
 }
 
 local function organize_imports()
