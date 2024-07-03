@@ -21,7 +21,9 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 			name = "Launch file",
 			program = "${file}",
 			cwd = "${workspaceFolder}",
-			runtimeExecutable = "${workspaceFolder}/node_modules/.bin/ts-node",
+			-- runtimeExecutable = os.getenv("HOME") .. "/.config/yarn/global/node_modules/.bin/ts-node"
+			runtimeExecutable = "/home/camille/code/neomi/neomi/back/node_modules/.bin/ts-node"
+
 		},
 	}
 end
