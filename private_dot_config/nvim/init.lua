@@ -14,9 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "catppuccin/nvim",               name = "catppuccin", priority = 1000 },
-	{ "numToStr/Comment.nvim",         opts = {} },
-	{ "nvim-telescope/telescope.nvim", branch = "0.1.x",    dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{ "numToStr/Comment.nvim", opts = {} },
+	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -53,8 +53,8 @@ require("lazy").setup({
 			{
 				"L3MON4D3/LuaSnip",
 				dependencies = {
-					"rafamadriz/friendly-snippets"
-				}
+					"rafamadriz/friendly-snippets",
+				},
 			}, -- Required
 		},
 	},
@@ -108,7 +108,7 @@ require("lazy").setup({
 			})
 		end,
 	},
-	{ "folke/neodev.nvim",     opts = {} },
+	{ "folke/neodev.nvim", opts = {} },
 	{ "tpope/vim-fugitive" },
 	{ "sindrets/diffview.nvim" },
 	{ "mfussenegger/nvim-dap" },
@@ -145,21 +145,23 @@ require("lazy").setup({
 		end,
 	},
 	{
-			"iamcco/markdown-preview.nvim",
-			cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-			ft = { "markdown" },
-			build = function() vim.fn["mkdp#util#install"]() end,
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
 	},
--- 	{
--- 		dev = true,
--- 		lazy = false,
--- 		dir = "spotify",
--- 		config = function(opts)
--- 			require("spotify").setup({ dir = opts.dir })
--- 		end,
--- 	},
--- }, {
--- 	dev = {
--- 		path = "$HOME/code/perso/lua/",
--- 	},
+	-- 	{
+	-- 		dev = true,
+	-- 		lazy = false,
+	-- 		dir = "spotify",
+	-- 		config = function(opts)
+	-- 			require("spotify").setup({ dir = opts.dir })
+	-- 		end,
+	-- 	},
+	-- }, {
+	-- 	dev = {
+	-- 		path = "$HOME/code/perso/lua/",
+	-- 	},
 })

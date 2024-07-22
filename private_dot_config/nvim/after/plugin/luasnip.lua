@@ -43,4 +43,3 @@ ls.add_snippets("lua", {
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
-
