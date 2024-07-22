@@ -150,16 +150,16 @@ require("lazy").setup({
 			ft = { "markdown" },
 			build = function() vim.fn["mkdp#util#install"]() end,
 	},
-	{
-		dev = true,
-		lazy = false,
-		dir = "spotify",
-		config = function(opts)
-			require("spotify").setup({ dir = opts.dir })
-		end,
-	},
-}, {
-	dev = {
-		path = "$HOME/code/perso/lua/",
-	},
+-- 	{
+-- 		dev = true,
+-- 		lazy = false,
+-- 		dir = "spotify",
+-- 		config = function(opts)
+-- 			require("spotify").setup({ dir = opts.dir })
+-- 		end,
+-- 	},
+-- }, {
+-- 	dev = {
+-- 		path = "$HOME/code/perso/lua/",
+-- 	},
 })
