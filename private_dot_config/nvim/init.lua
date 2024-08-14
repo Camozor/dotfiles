@@ -15,6 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{
+		"aserowy/tmux.nvim",
+		config = function()
+			return require("tmux").setup()
+		end,
+	},
 	{ "numToStr/Comment.nvim", opts = {} },
 	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
